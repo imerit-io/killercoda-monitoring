@@ -8,9 +8,19 @@ Your task is to fix the **broken Prometheus + Grafana setup** so that:
 2. Targets appear as `UP` in Prometheus.
 3. Grafana dashboards display metrics correctly.
 
+
+
 ### Instructions
 
-1. Explore the monitoring namespace and resources:
+1. Install all Yamls
+   After requisite namespace creation
+   kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.73.0/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml
+   kubectl apply -f monitoring/ 
+   kubectl apply -f app/ 
+
+2. Killercoda instance needs port forwarding on all IP not just localhost ie, 0.0.0.0 must be explicitly mentioned as address parameter of port-forward. Required to visualize Grafana dashboard
+
+2. Explore the monitoring namespace and resources:
    ```bash
    kubectl get all -n monitoring
    kubectl logs -n monitoring <prometheus-pod>
