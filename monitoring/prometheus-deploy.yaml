@@ -38,5 +38,5 @@ data:
     scrape_configs:
       - job_name: 'sample-app'
         static_configs:
-        - targets: ['sample-app.app.svc.cluster.local:8080']
+        - targets: ['app-name.app.svc.cluster.local:9999']
 
