@@ -19,8 +19,9 @@ Your task is to fix the **broken Prometheus + Grafana setup** so that:
    kubectl apply -f app/ 
 
 2. Killercoda instance needs port forwarding on all IP not just localhost ie, 0.0.0.0 must be explicitly mentioned as address parameter of port-forward. Required to visualize Grafana dashboard
+   Click on hamburger menu at the top right and Traffic /Ports to open the grafana dashboard
 
-2. Explore the monitoring namespace and resources:
+3. Explore the monitoring namespace and resources:
    ```bash
    kubectl get all -n monitoring
    kubectl logs -n monitoring <prometheus-pod>

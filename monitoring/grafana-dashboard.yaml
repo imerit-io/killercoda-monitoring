@@ -8,11 +8,20 @@ metadata:
 data:
   sample-dashboard.json: |
     {
+      "uuid": "sample-app",
       "title": "Sample App Metrics",
+      "schemaVersion": 36,
+      "version": 1,
+
       "panels": [
         {
           "type": "timeseries",
           "title": "Sample App Up",
+          "gridPos": { "x": 0, "y": 0, "w": 24, "h": 8 },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
           "targets": [
             {
               "expr": "up{job=\"sample-app\"}"
