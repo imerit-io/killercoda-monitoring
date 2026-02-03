@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: prom/sample-app:v0.1
+        image: quay.io/brancz/prometheus-example-app:v0.3.0
         ports:
         - containerPort: 8080
         readinessProbe:
